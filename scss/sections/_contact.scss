@@ -1,0 +1,54 @@
+.contact{
+    display: flex;
+    //justify-content: center;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+.contact-info{
+    flex: 1;
+    color: white;
+    margin-right: 20px;
+}
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    float: right;
+    flex: 3;
+    margin-right: 30px;
+}
+.text-input{
+    background-color: rgb(226, 221, 221);
+    border: none;
+}
+.names{
+    
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.fname{
+    background-color: rgb(226, 221, 221);
+    margin-right: 20px;
+   // flex: 1;
+   width: 50%;
+}
+.lname{
+   // flex: 1;
+   width: 50%;
+}
+
+.message{
+    height: 300px;
+}
+.submit-btn{
+    height: 50px;
+    width: 200px;
+    border: 2px solid black;
+    border-radius: 6px;
+    background-color: white;
+}
+.submit-btn:hover{
+    opacity: .75;
+    background-color: rgb(168, 163, 163);
+}

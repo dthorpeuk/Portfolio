@@ -1,0 +1,50 @@
+.project-section{
+    width: calc(100% - 20px);// 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+    //padding: 20px;
+}
+.project-grid{
+    margin-top: 50px;
+    display: grid;
+    gap: 10px;
+    width: 90%;
+    
+    grid-template-areas: 'proj1 proj2 proj3'
+                            'proj4 proj5 proj6';
+}
+.project-card{
+   // width: 300px;
+   
+    text-decoration: none;
+    text-align: left;
+    color: white;
+    line-height: 0.5;
+    margin-bottom: 20px;
+}
+.project-card:hover{
+    color: rgb(226, 221, 221);
+}
+.project-card:hover .project-img{
+    opacity: 0.75;
+}
+.project-img{
+
+  //  display: block;
+    width: 100%;
+}
+.project-img img{
+    border-radius:15px;
+    max-width: 100%;
+}
+.card-link-container{
+    
+}
+.project-link{
+    //text-decoration: none;
+    float: left;
+}
+.link-title{
+   // text-decoration: none;
+   text-align: left;
+}

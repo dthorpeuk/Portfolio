@@ -1,0 +1,41 @@
+$sidebar-width:300px;
+$sidebar-width-xs:150px;
+$sidebar-width-s:200px;
+$sidebar-width-m:250px;
+$sidebar-width-l:300px;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?xyvfzo');
+    src:  url('../fonts/icomoon.eot?xyvfzo#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?xyvfzo') format('truetype'),
+      url('../fonts/icomoon.woff?xyvfzo') format('woff'),
+      url('../fonts/icomoon.svg?xyvfzo#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+$font-family-default: 'Poppins', 'sans-serif';
+
+//Colour
+$light-blue:#329ff4;
+$near-black:#030712;
+
+
+//Colour Implementation
+$colour-background-primary:$near-black;
+$colour-background-secondary:red;
+$colour-background-container:white;
+
+//Icon
+.icon-git::before{
+  font-family: 'icomoon' !important;
+  font-size: 2em;
+  content: '\eab0';
+}
+
+//Breakpoints
+$brkpoint-xs:576px;
+$brkpoint-s:768px;
+$brkpoint-m:992px;
+$brkpoint-l:1200px;

@@ -1,0 +1,43 @@
+@mixin mq($s){
+    @if $s == "x-small"{
+        @media(max-width: $brkpoint-xs){
+            @content;
+        }
+    }
+        @else if $s == "small"{
+            @media(min-width: $brkpoint-xs) and (max-width: $brkpoint-s){
+                @content;
+            }
+        }
+        @else if $s == "small-up"{
+            @media(min-width: $brkpoint-xs){
+                @content;
+            }
+        }
+        @else if $s == "medium"{
+            @media(min-width: $brkpoint-s) and (max-width: $brkpoint-m){
+                @content;    
+            }
+        }
+        @else if $s == "medium-up"{
+            @media(min-width: $brkpoint-s){
+                @content;    
+            }
+        }
+        @else if $s == "large"{
+            @media(min-width: $brkpoint-m) and (max-width: $brkpoint-l){
+                @content;
+            }
+        }
+        @else if $s == "x-large"{
+            @media(min-width: $brkpoint-l) {
+                @content;
+            }
+        }
+}
+@mixin reveal($disp,$min){
+    @include mq($min){
+     display: #{$disp};
+     }
+ 
+ }
