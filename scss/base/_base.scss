@@ -24,10 +24,25 @@ body{
     width: 50%;
     background-color:$colour-background-container;
     border-radius: 15px;
-    margin-top: 50px;
+    margin-top: 250px;
     padding: 50px;
     @include mq(x-small){
         width: 70%;
+    }
+    @include mq(medium){
+        float: none;
+        margin-top: 50px;
+        margin-left: $sidebar-width-m;
+    }
+    @include mq(large){
+        float: none;
+        margin-top: 50px;
+        margin-left: $sidebar-width-l;
+    }
+    @include mq(x-large){
+        float: none;
+        margin-top: 50px;
+        margin-left: $sidebar-width-l;
     }
 }
 .generic-background{
@@ -35,6 +50,7 @@ body{
     background: linear-gradient(90deg,$colour-background-secondary, $colour-background-primary 60%);
     width: 100%;
     height: 100%;
+    margin-left: -10px;
     @include mq(x-small){
         height:150%;
     }
