@@ -2,6 +2,9 @@
 *::before,*::after{
     box-sizing: border-box;
 }
+html{
+    background-color: $colour-background-primary;
+}
 body{
     //height: 100%;
     font-family: $font-family-default;

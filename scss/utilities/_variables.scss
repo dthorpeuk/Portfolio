@@ -21,11 +21,16 @@ $font-family-default: 'Poppins', 'sans-serif';
 $light-blue:#329ff4;
 $near-black:#030712;
 
+//Theme
 
 //Colour Implementation
 $colour-background-primary:$near-black;
 $colour-background-secondary:red;
 $colour-background-container:white;
+
+$color-background-alt-primary:white;
+$color-background-alt-secondary:$light-blue;
+$color-background-alt-container: $light-blue;
 
 //Icon
 .icon-git::before{
