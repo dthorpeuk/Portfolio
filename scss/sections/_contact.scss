@@ -1,8 +1,12 @@
 .contact{
     display: flex;
+    flex-direction: column;
     //justify-content: center;
     margin-top: 50px;
     margin-left: 20px;
+    @include mq(small-up){
+        flex-direction: row;
+    }
 }
 .contact-info{
     flex: 1;

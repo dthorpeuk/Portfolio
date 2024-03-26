@@ -4,6 +4,8 @@
 }
 html{
     background-color: $colour-background-primary;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 body{
     //height: 100%;

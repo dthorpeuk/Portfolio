@@ -9,9 +9,17 @@
     display: grid;
     gap: 10px;
     width: 90%;
-    
-    grid-template-areas: 'proj1 proj2 proj3'
-                            'proj4 proj5 proj6';
+    flex: auto;
+    @include mq(small){
+        grid-template-areas:'proj1 proj2' 
+        'proj3 proj4'
+        'proj5 proj6';
+    }
+    @include mq(medium-up){
+        grid-template-areas: 'proj1 proj2 proj3'
+        'proj4 proj5 proj6';
+    }
+
 }
 .project-card{
    // width: 300px;
