@@ -90,11 +90,7 @@ aside{
     justify-content: center;
     
 }
-.social-item::before{
-    // font-family: 'icomoon' !important;
-    // font-size: 2em;
-    // content: '\eab0';
-}
+
 .topbar{
     position: fixed;
     display: flex;
@@ -133,7 +129,14 @@ aside{
 .top-social .icon-git{
     padding-top: 10px;
     padding-left: 10px;
+  //  color: white;
+}
+.social-item{
     color: white;
+}
+.social-item:hover{
+    color: $light-blue;
+   // background-color: #329ff4;
 }
 .topbar-row1{
     display: flex;
