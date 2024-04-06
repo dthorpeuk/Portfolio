@@ -2,6 +2,20 @@
 *::before,*::after{
     box-sizing: border-box;
 }
+// .title-container{
+//     position: absolute;
+//     top: 20%;
+//     left: 0;
+//     width: 100%;
+//     transform: translateY(-50%);
+// }
+.glitch-window{
+    // position: relative;
+    // top: 50%;
+    // left: 0;
+    // width: 100%;
+    // transform: translateY(-50%);
+}
 html{
     background-color: $colour-background-primary;
     overflow-x: hidden;
@@ -19,6 +33,48 @@ body{
     text-align: center;
     justify-content: center;
     align-content: center;
+}
+.tempDialog{
+    //width: 20%;
+    //margin-left: 50px;
+    margin-right: auto;
+    background-color: black;
+    color: white;
+    z-index: 2;
+    position: absolute;
+    padding: 20px;
+    box-shadow: 0 0 30px 20px red  ;
+    @include mq(x-small){
+        bottom: 300px;
+    }
+    @include mq(small){
+        bottom: 300px;
+    }
+    @include mq(medium){
+        
+    }
+    @include mq(large){
+        margin-left: 50px;
+    }
+    @include mq(x-large){
+        margin-left: 100px;
+    }
+
+}
+.button-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.btn{
+    display: flex;
+    align-items: center;
+    background-color: grey;
+    height:35px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    cursor: pointer;
 }
 .reduced-container{
     width: 50%;
@@ -82,6 +138,12 @@ body{
     //     float: none;
     //     margin-left: $sidebar-width-s;
     // }
+    @include mq(x-small){
+        margin-top: $topbar-height;
+    }
+    @include mq(small){
+        margin-top: $topbar-height;
+    }
     @include mq(medium){
         float: none;
         margin-left: $sidebar-width-m;
