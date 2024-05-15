@@ -1,39 +1,49 @@
 @mixin mq($s){
     @if $s == "x-small"{
-        @media(max-width: $brkpoint-xs){
+        @media (max-width:  $brkpoint-sm-one ){
             @content;
         }
     }
-        @else if $s == "small"{
-            @media(min-width: $brkpoint-xs) and (max-width: $brkpoint-s){
-                @content;
-            }
+    @else if $s == "small"{
+        @media (min-width: $brkpoint-sm) and (max-width: $brkpoint-md-one){
+            @content;
         }
-        @else if $s == "small-up"{
-            @media(min-width: $brkpoint-xs){
-                @content;
-            }
+    }
+    @else if $s == "small-up"{
+        @media (min-width: $brkpoint-sm) {
+            @content;
         }
-        @else if $s == "medium"{
-            @media(min-width: $brkpoint-s) and (max-width: $brkpoint-m){
-                @content;    
-            }
+    }
+    @else if $s == "small-down"{
+        @media (max-width: $brkpoint-md-one){
+            @content;
         }
-        @else if $s == "medium-up"{
-            @media(min-width: $brkpoint-s){
-                @content;    
-            }
+    }
+    @else if $s == "medium"{
+        @media (min-width: $brkpoint-md) and (max-width: $brkpoint-lg-one){
+            @content;
         }
-        @else if $s == "large"{
-            @media(min-width: $brkpoint-m) and (max-width: $brkpoint-l){
-                @content;
-            }
+    }
+    @else if $s == "medium-up"{
+        @media (min-width: $brkpoint-md){
+            @content;
         }
-        @else if $s == "x-large"{
-            @media(min-width: $brkpoint-l) {
-                @content;
-            }
+    }
+    @else if $s == "medium-down"{
+        @media (max-width: $brkpoint-lg-one){
+            @content;
         }
+    }
+    @else if $s == "large"{
+        @media (min-width: $brkpoint-lg){
+            @content;
+        }
+    }
+    // @else if $s == "large"{
+    //     @media (min-width: $brkpoint-lg){
+    //         @content;
+    //     }
+    // }
 }
 @mixin reveal($disp,$min){
     @include mq($min){
@@ -74,3 +84,20 @@
       }
 
  }
+ @mixin create-sphere($size,$main, $sec){
+    border-radius: 50%;
+    //position: fixed;
+    //transition: top 2s, left 2s, ease;
+    //transition: left 2s ease;
+   // top: $top;
+   // left: $left;
+    
+    width: $size;
+    height: $size;
+    background: radial-gradient(
+        circle at 30% 30%,
+        $main,
+        $sec
+    );
+    box-shadow: 0 0 15px white;
+}

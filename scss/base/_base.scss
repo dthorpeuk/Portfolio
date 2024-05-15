@@ -2,6 +2,9 @@
 *::before,*::after{
     box-sizing: border-box;
 }
+*, :after, :before {
+    box-sizing: border-box;
+}
 // .title-container{
 //     position: absolute;
 //     top: 20%;
@@ -9,13 +12,7 @@
 //     width: 100%;
 //     transform: translateY(-50%);
 // }
-.glitch-window{
-    // position: relative;
-    // top: 50%;
-    // left: 0;
-    // width: 100%;
-    // transform: translateY(-50%);
-}
+
 html{
     background-color: $colour-background-primary;
     overflow-x: hidden;
@@ -23,7 +20,23 @@ html{
 }
 body{
     //height: 100%;
+   // background-color: black;
     font-family: $font-family-default;
+}
+.page-primary{
+   // background-color: black;
+}
+.page-secondary{
+    background: linear-gradient(90deg,$colour-background-secondary, $colour-background-primary 60%);
+}
+.vid-background{
+    position: fixed;
+ 
+ //width: 100vw;
+    height: 100vh;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
 }
 .container{
     // margin-right: auto;
@@ -33,6 +46,17 @@ body{
     text-align: center;
     justify-content: center;
     align-content: center;
+}
+//the container seems to override the code sections text align (so, this gives the correct style from the off)
+.container-for-code{
+    // margin-right: auto;
+    // margin-left: auto;
+    // margin-top: auto;
+    margin: auto;
+    text-align: left;
+    justify-content: center;
+    align-content: center;
+    //background-color: black;
 }
 .tempDialog{
     //width: 20%;
@@ -78,42 +102,65 @@ body{
 }
 .reduced-container{
     width: 50%;
+    z-index: 1;
+    position: relative;
+    top: 300px;
     background-color:$colour-background-container;
     border-radius: 15px;
-    margin-top: 250px;
+    margin-top: 50px;
+    margin-bottom: 250px;
     padding: 50px;
+    box-shadow: 0 0 20px red;
     @include mq(x-small){
         width: 70%;
     }
     @include mq(medium){
         float: none;
         margin-top: 50px;
-        margin-left: $sidebar-width-m;
+       // margin-left: $sidebar-width-m;
     }
     @include mq(large){
         float: none;
         margin-top: 50px;
-        margin-left: $sidebar-width-l;
+      //  margin-left: $sidebar-width-l;
     }
     @include mq(x-large){
         float: none;
         margin-top: 50px;
-        margin-left: $sidebar-width-l;
+       // margin-left: $sidebar-width-l;
     }
 }
-.generic-background{
-    padding: 50px;
-    background: linear-gradient(90deg,$colour-background-secondary, $colour-background-primary 60%);
+.reduced-container .portfolio-img{
     width: 100%;
-    height: 100%;
-    margin-left: -10px;
-    @include mq(x-small){
-        height:150%;
-    }
-    @include mq(small){
-        height:150%;
-    }
 }
+.reduced-container>*{
+    color: white;
+}
+.reduced-container p{
+
+}
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+  }
+// .generic-background{
+//     padding: 50px;
+//    // background: linear-gradient(90deg,$colour-background-secondary, $colour-background-primary 60%);
+//     width: 100%;
+//     height: 100%;
+//     margin-left: -10px;
+//     @include mq(x-small){
+//         height:150%;
+//     }
+//     @include mq(small){
+//         height:150%;
+//     }
+// }
 .extended-height{
     height: 200%;
 }
@@ -138,24 +185,24 @@ body{
     //     float: none;
     //     margin-left: $sidebar-width-s;
     // }
-    @include mq(x-small){
-        margin-top: $topbar-height;
-    }
-    @include mq(small){
-        margin-top: $topbar-height;
-    }
-    @include mq(medium){
-        float: none;
-        margin-left: $sidebar-width-m;
-    }
-    @include mq(large){
-        float: none;
-        margin-left: $sidebar-width-l;
-    }
-    @include mq(x-large){
-        float: none;
-        margin-left: $sidebar-width-l;
-    }
+    // @include mq(x-small){
+    //     margin-top: $topbar-height;
+    // }
+    // @include mq(small){
+    //     margin-top: $topbar-height;
+    // }
+    // @include mq(medium){
+    //     float: none;
+    //     margin-left: $sidebar-width-m;
+    // }
+    // @include mq(large){
+    //     float: none;
+    //     margin-left: $sidebar-width-l;
+    // }
+    // @include mq(x-large){
+    //     float: none;
+    //     margin-left: $sidebar-width-l;
+    // }
 }
 .scroll{
 
@@ -163,6 +210,7 @@ body{
     text-align: center;
     
     text-decoration: none;
+    z-index: 2;
 
 }
 .scroll-down{

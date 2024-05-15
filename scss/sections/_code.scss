@@ -1,0 +1,23 @@
+.page-coding-examples{
+    //background: ;
+}
+.container-for-code h2, .container-for-code h1{
+    text-align: center;
+}
+.code-back{
+    background-color: black;
+}
+.code-segment{
+    text-align: left;
+    margin: auto;
+   // background-color: black;
+    color: green;
+    overflow-x: scroll;
+}
+.code-back pre{
+    word-wrap: normal;
+    overflow-x: scroll;
+}
+
+.code-segment-1{
+}

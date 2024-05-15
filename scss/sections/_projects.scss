@@ -1,11 +1,15 @@
 .project-section{
-    width: calc(100% - 20px);// 100%;
-    margin-left: 20px;
-    margin-right: 20px;
+    //width: calc(100% - 20px);// 100%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
     //padding: 20px;
+    z-index: 1;
 }
 .project-grid{
     margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
     display: grid;
     gap: 10px;
     width: 90%;
@@ -27,7 +31,7 @@
     text-decoration: none;
     text-align: left;
     color: white;
-    line-height: 0.5;
+    //line-height: 0.5;
     margin-bottom: 20px;
 }
 .project-card:hover{
@@ -40,6 +44,7 @@
 
   //  display: block;
     width: 100%;
+    
 }
 .project-img img{
     border-radius:15px;

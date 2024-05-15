@@ -6,7 +6,8 @@
     
     align-items: center;
     //background-color: red;
-    background-image: url("../Images/SpaceBattle1.jpg");
+    //background-image: url("../Images/SpaceBattle1.jpg");
+    
     background-repeat: no-repeat;
     background-position: 50%;
     background-size: cover;
@@ -25,6 +26,21 @@ cursor: default;
    @include mq(small-up){
     font-size: 120px;
    }
+}
+.title-container{
+//A rare vertical media query
+    @media (max-height: 1000px) {
+        margin-top: 200px;
+    }
+       
+   
+}
+.mast__text{
+    margin-left: 20px;
+}
+.mast__text>span{
+    color: green;
+    font-family:"Orbitron";//, sans-serif;
 }
 // .revealing-text{
 //     -webkit-animation: letter-glow 0.7s 0s ease both;

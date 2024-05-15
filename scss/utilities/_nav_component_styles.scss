@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?xyvfzo');
+    src:  url('../fonts/icomoon.eot?xyvfzo#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?xyvfzo') format('truetype'),
+      url('../fonts/icomoon.woff?xyvfzo') format('woff'),
+      url('../fonts/icomoon.svg?xyvfzo#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+$font-family-default: 'Poppins', 'sans-serif';
+$nav-width-m: 0px;
+$nav-height-m: 0px;
+
+.nav-inner{
+    position: fixed;
+    width: $nav-width-m;
+    height: $nav-height-m;
+    z-index: 101;
+    
+    top:50%;
+    left:50%;
+}
+.nav-outer{
+    
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+       // right: 0;
+        z-index: 100;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: flex;
+        -webkit-overflow-scrolling: touch;
+        outline: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        -ms-flex-pack: center !important;
+       // padding: 30px;
+}
+.nav-outer-visible{
+    right: 0;
+}
+// .nav-node{
+//     position: absolute;
+//     z-index: 3;
+//     //animation: forwards;
+//     animation-fill-mode: forwards;
+// }
+.nav-circle{
+
+    @include create-sphere(50px, red,#432703);//create-sphere(50px, red, #432703);
+     display: flex;
+     flex-direction: column;
+    text-align: center;
+   justify-content: center;
+   color:white;
+
+cursor: pointer;
+}
+
+.terminal-node{
+    @include create-sphere(50px, brown,rgb(5, 5, 102));//create-sphere(50px, blue,rgb(5, 5, 102));
+}
+.nav-circle:hover{
+    box-shadow: 0 0 30px sandybrown;
+}
+.nav-icon{
+    pointer-events: none;
+}
+
+.nav-icon-root::before{
+    font-family: 'icomoon' !important;
+    color: inherit;
+    content: "\e91f";
+}
+.nav-icon-home::before{
+    font-family: 'icomoon' !important;
+    color: inherit;
+    content: "\e902";
+}
+.nav-icon-about::before{
+    font-family: 'icomoon' !important;
+    color: inherit;
+    content: "\e919";
+}
+.nav-icon-code::before{
+    font-family: 'icomoon' !important;
+    color: inherit;
+    content: "\ea80";
+}
+.nav-icon-contact::before{
+    font-family: 'icomoon' !important;
+    color: inherit;
+    content: "\e942";
+}
+.nav-icon-scs::before{
+    font-family: 'icomoon' !important;
+    color: inherit;
+    content: "\e920";
+}
+.nav-icon-portfolio::before{
+    font-family: 'icomoon' !important;
+    color: inherit;
+    content: "\e925";
+}
+.nav-icon-example::before{
+    font-family: 'icomoon' !important;
+    color: inherit;
+    content: "\e95c";
+}
+.nav-icon-demo::before{
+    font-family: 'icomoon' !important;
+    color: inherit;
+    content: "\e90c";
+}
+.nav-icon-demoa::before{
+    font-family: 'icomoon' !important;
+    color: inherit;
+    content: "\e90c";
+}
+.nav-icon-demob::before{
+    font-family: 'icomoon' !important;
+    color: inherit;
+    content: "\e90c";
+}
+.nav-icon-back::before{
+    font-family: 'icomoon' !important;
+    color: inherit;
+    content: "\ea14";
+}
+
+.nav-node{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 101;
+    //animation: forwards;
+   // animation-fill-mode: forwards;
+    align-items: center;
+}
+.nav-text{
+    cursor: pointer;
+    text-shadow: 0 0 5px red ;
+    font-family: $font-family-default;
+    color:white;
+}
+
+

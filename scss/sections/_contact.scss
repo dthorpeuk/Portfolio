@@ -1,17 +1,32 @@
 .contact{
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     //justify-content: center;
     margin-top: 50px;
     margin-left: 20px;
+    width: 100%;
     @include mq(small-up){
         flex-direction: row;
+    }
+    @include mq(small){
+        width: 100%;
+        
+    }
+    @include mq(medium){
+        width: 750px;
+    }
+    @include mq(large){
+        width: 1000px;
+        
     }
 }
 .contact-info{
     flex: 1;
     color: white;
     margin-right: 20px;
+    text-align: left;
 }
 .contact-form{
     display: flex;
@@ -51,8 +66,50 @@
     border: 2px solid black;
     border-radius: 6px;
     background-color: white;
+    cursor: pointer;
 }
 .submit-btn:hover{
     opacity: .75;
     background-color: rgb(168, 163, 163);
+}
+button.close {
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+}
+.close {
+    float: right;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .2;
+    filter: alpha(opacity = 20);
+}
+.close:hover{
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: .5;
+    filter: alpha(opacity = 50);
+}
+.validation-message{
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 30px;
+}
+.validation-message.bad{
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    color: #a94442;
+}
+.validation-message.good{
+   // background-color: #f2dede;
+    //border-color: #ebccd1;
+    color: #fff;
+    background: #2ecc71;
 }
